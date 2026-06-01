@@ -96,8 +96,8 @@ export function Header() {
       )}
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-black/40 lg:hidden" onClick={() => setOpen(false)}>
-          <div className="absolute left-0 top-0 h-full w-72 bg-background p-6 animate-slide-in" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[100] bg-black/50 lg:hidden" onClick={() => setOpen(false)}>
+          <div className="absolute left-0 top-0 h-full w-72 max-w-[85vw] bg-white shadow-2xl p-6 overflow-y-auto animate-slide-in-left" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-8">
               <span className="font-display font-bold text-xl text-navy">WILLY STORE</span>
               <button onClick={() => setOpen(false)} aria-label="Cerrar"><X className="size-5" /></button>
