@@ -102,14 +102,14 @@ export function Header() {
               <span className="font-display font-bold text-xl text-navy">WILLY STORE</span>
               <button onClick={() => setOpen(false)} aria-label="Cerrar"><X className="size-5" /></button>
             </div>
-            <nav className="flex flex-col gap-1">
+            <nav className="flex flex-col gap-2">
               {NAV.map((n) => (
                 <Link
                   key={n.label}
                   to={n.to}
                   search={(n as any).search ?? {}}
                   onClick={() => setOpen(false)}
-                  className="py-3 text-sm font-semibold uppercase tracking-wider border-b border-border"
+                  className="py-5 text-base font-semibold uppercase tracking-wider border-b border-border"
                 >
                   {n.label}
                 </Link>
