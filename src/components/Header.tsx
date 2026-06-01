@@ -96,7 +96,7 @@ export function Header() {
         </div>
       )}
 
-      {open && (
+      {open && typeof document !== "undefined" && createPortal(
         <div className="fixed inset-0 z-[100] bg-black/50 lg:hidden" onClick={() => setOpen(false)}>
           <div className="absolute left-0 top-0 h-full w-[88vw] max-w-md bg-white shadow-2xl p-6 overflow-y-auto animate-slide-in-left" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-8">
@@ -122,7 +122,8 @@ export function Header() {
               <a href="mailto:willystore@gmail.com"><Mail className="size-5" /></a>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </header>
   );
