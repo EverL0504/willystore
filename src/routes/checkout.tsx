@@ -171,7 +171,7 @@ function CheckoutPage() {
   );
 }
 
-function Field({ label, name, value, onChange, error, type = "text", placeholder }: any) {
+function Field({ label, name, value, onChange, error, type = "text", placeholder }: { label: string; name: string; value: string; onChange: (v: string) => void; error?: string; type?: string; placeholder?: string }) {
   return (
     <label className="block">
       <span className="block text-xs uppercase tracking-widest font-semibold mb-1.5">{label}</span>

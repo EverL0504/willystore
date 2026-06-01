@@ -61,7 +61,7 @@ function CatalogPage() {
       <header className="mb-8">
         <p className="text-xs uppercase tracking-widest text-muted-foreground">Tienda</p>
         <h1 className="font-display text-4xl sm:text-5xl font-bold mt-1">
-          {categoria ? CATEGORY_LABEL[categoria] : q ? `Resultados: "${q}"` : "Catálogo"}
+          {categoria ? CATEGORY_LABEL[categoria as Category] : q ? `Resultados: "${q}"` : "Catálogo"}
         </h1>
         <p className="text-muted-foreground mt-2">{filtered.length} producto{filtered.length === 1 ? "" : "s"}</p>
       </header>
