@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Search, ShoppingBag, Menu, X, Instagram, Facebook, Mail } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useCart } from "@/lib/cart";
 
 const NAV = [
