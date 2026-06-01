@@ -7,7 +7,7 @@ import { products, brands, colors, type Category } from "@/lib/products";
 
 const search = z.object({
   categoria: z.enum(["basicas", "oversized", "camisas", "shorts", "jeans"]).optional(),
-  q: z.string().optional(),
+  q: z.coerce.string().optional(),
 });
 
 export const Route = createFileRoute("/catalogo")({
